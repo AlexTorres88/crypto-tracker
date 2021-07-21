@@ -12,7 +12,7 @@ After that, run:
 ````
 pip install -r requirements.txt
 ````
-Now all you need to do is setup the environment variables located in the settings.py file (Remember to rename your settings.example.py file to this) and run:
+Now all you need to do is setup the environment variables located in the settings.py file (Remember to rename your settings.example.py file to this) and then run:
 ````
 flask run
 `````

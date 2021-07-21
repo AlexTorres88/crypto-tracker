@@ -1,0 +1,14 @@
+CREATE TABLE cryptos (
+   id serial primary key,
+   name varchar(80) unique NOT NULL
+	
+);
+
+CREATE TABLE prices (
+	id serial primary key, 
+   	crypto_id int not null,
+   	price  numeric NOT NULL,
+	registered_at TIMESTAMP,
+	FOREIGN KEY (crypto_id)
+		REFERENCES cryptos(id) on delete cascade
+);

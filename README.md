@@ -4,7 +4,11 @@ The purpose of this project is to store the data collected by the azure-crypto-s
 
 # Setup 
 
-First of all, you should activate the virtual environment:
+First of all, you should create the virtual environment (you need to have virtualenv installed):
+````
+virtualenv [env_name_here_without_brackets]
+`````
+Then, you should activate the virtual environment:
 ````
 source/bin/activate
 ````

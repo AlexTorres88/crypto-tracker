@@ -13,9 +13,7 @@ def get_prices():
 
 def add_cryptos(res):
 
-    # Change string to json
-    data = json.loads(res)
-    for d in data:
+    for d in res:
         n = d["name"]
 
         # Convert price string to numeric

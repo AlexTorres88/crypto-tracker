@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block style %}
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='stylesheets/prices.css') }}">
+{% endblock %}
+
+{% block main %}
+<h1>Cryptocurrency market prices as of {{ coins[0].timestamp|format_date }}</h1>
+{%for i in range(coins|length) %}
+    <ul class="coin-display">
+        <li>
+            <p>{{ i + 1 }}.  {{ coins[i].name }}  {{ coins[i].price }}</p>
+        </li>
+    </ul>
+{%endfor%}
+{% endblock %}

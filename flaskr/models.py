@@ -1,4 +1,4 @@
-from flaskr.__init__ import db
+from flaskr.db_setup import database as db
 
 class Crypto(db.Model):
     __tablename__ = 'cryptos'

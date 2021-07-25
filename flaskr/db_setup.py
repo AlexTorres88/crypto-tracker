@@ -1,6 +1,6 @@
 import sqlalchemy as db
-from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import sessionmaker
+from flask_sqlalchemy import SQLAlchemy
 from flaskr.settings import SQLALCHEMY_DATABASE_URI
 
 # Db initialization

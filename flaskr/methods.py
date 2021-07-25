@@ -1,9 +1,9 @@
 import requests
+import datetime
+from re import sub
 from flaskr.models import Price
 from flaskr.settings import CRYPTO_BOT_URL
 from flaskr.db_setup import db, session, table_cryptos
-import datetime
-from re import sub
 
 def get_prices():
     # Call Azure Function to scrape crypto prices

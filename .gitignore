@@ -1,4 +1,5 @@
 flaskr/settings.py
+__pycache__
 .env
 venv
-__pycache__
+instance

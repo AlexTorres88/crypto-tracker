@@ -5,12 +5,23 @@
 {% endblock %}
 
 {% block main %}
-<h1>Cryptocurrency market prices as of {{ coins[0].timestamp|format_date }}</h1>
-{%for i in range(coins|length) %}
-    <ul class="coin-display">
-        <li>
-            <p>{{ i + 1 }}.  {{ coins[i].name }}  {{ coins[i].price }}</p>
-        </li>
-    </ul>
-{%endfor%}
+<h1 style="text-align: center;">Cryptocurrency market prices</h1>
+<h3 style="text-align: center;font-weight: 400;">{{ coins[0].timestamp|format_date }}</h3>
+<table class="table-coins">
+    <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Price</th>
+    </tr>
+    {%for i in range(coins|length) %}
+        <tr>
+            <td class="table-content-center">{{ i + 1 }}.</td>
+            <td style="display: flex; justify-content: space-around;" class="table-content-center">
+                <img src="../static/images/{{coins[i].name}}-logo.svg" width="40" height="40" alt="BTC logo"/> 
+                <p>{{ coins[i].name }}</p>
+            </td>
+            <td class="table-content-center">{{ coins[i].price }}</td>
+        </tr>
+    {%endfor%}
+</table>
 {% endblock %}

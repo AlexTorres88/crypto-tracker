@@ -17,11 +17,13 @@ class Price(db.Model):
     crypto_id = db.Column(db.Integer, db.ForeignKey('cryptos.id'))
     price = db.Column(db.Integer)
     registered_at = db.Column(db.DateTime)
+    market_cap = db.Column(db.Integer)
 
     # Relationships
     crypto = db.relationship("Crypto", back_populates="prices", foreign_keys=crypto_id)
 
-    def __init__(self, crypto_id, price, timestamp):
+    def __init__(self, crypto_id, price, registered_at, market_cap):
         self.crypto_id = crypto_id
         self.price = price
-        self.registered_at = timestamp
+        self.registered_at = registered_at
+        self.market_cap = market_cap

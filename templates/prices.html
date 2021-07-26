@@ -12,6 +12,7 @@
         <th>#</th>
         <th>Name</th>
         <th>Price</th>
+        <th>Market Cap</th>
     </tr>
     {%for i in range(coins|length) %}
         <tr>
@@ -21,6 +22,7 @@
                 <p>{{ coins[i].name }}</p>
             </td>
             <td class="table-content-center">{{ coins[i].price }}</td>
+            <td class="table-content-center">{{ coins[i].market_cap }}</td>
         </tr>
     {%endfor%}
 </table>

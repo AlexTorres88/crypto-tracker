@@ -1,0 +1,2 @@
+ALTER TABLE prices
+ADD COLUMN market_cap numeric NOT NULL;

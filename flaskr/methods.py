@@ -19,13 +19,17 @@ def add_cryptos(res):
         price = d["price"]
         price  = float(sub(r'[^\d.]', '', price))
 
-        # Conver timestamp string into datetime object
+        # Convert timestamp string into datetime object
         timestamp = d["timestamp"]
         ts = datetime.datetime.strptime(timestamp, '%Y-%m-%d %H:%M:%S.%f')
 
+        # Convert market_cap string to numeric
+        market_cap = d["market_cap"]
+        market_cap = float(sub(r'[^\d.]', '', market_cap))
+
         # Select crypto_id to insert price
         crypto_id = db.select([table_cryptos.columns.id]).where(table_cryptos.columns.name == n)
-        price = Price(crypto_id, price, ts)
+        price = Price(crypto_id, price, ts, market_cap)
 
         # Add records to the db
         session.add(price)

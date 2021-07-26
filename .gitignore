@@ -1,4 +1,5 @@
 flaskr/settings.py
+.vscode
 __pycache__
 .env
 venv

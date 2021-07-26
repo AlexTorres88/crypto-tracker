@@ -1,6 +1,7 @@
 import requests
 import datetime
 from re import sub
+import json
 from flaskr.models import Price
 from flaskr.settings import CRYPTO_BOT_URL
 from flaskr.db_setup import db, session, table_cryptos
@@ -8,12 +9,10 @@ from flaskr.db_setup import db, session, table_cryptos
 def get_prices():
     # Call Azure Function to scrape crypto prices
     res = requests.get(CRYPTO_BOT_URL)
-    return res.text
+    return json.loads(res.text)
 
 def add_cryptos(res):
-
     for d in res:
-        n = d["name"]
 
         # Convert price string to numeric
         price = d["price"]
@@ -27,8 +26,9 @@ def add_cryptos(res):
         market_cap = d["market_cap"]
         market_cap = float(sub(r'[^\d.]', '', market_cap))
 
+        name = d["name"]
         # Select crypto_id to insert price
-        crypto_id = db.select([table_cryptos.columns.id]).where(table_cryptos.columns.name == n)
+        crypto_id = db.select([table_cryptos.columns.id]).where(table_cryptos.columns.name == name)
         price = Price(crypto_id, price, ts, market_cap)
 
         # Add records to the db

@@ -7,15 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
-    <title>{{ title }} - CryptoTracker</title>
-    <style>
-        * {
-            font-family: 'Roboto', sans-serif;
-        }
-        body {
-            background-color: rgb(242, 248, 253);
-        }
-    </style>
+    <title>{{ title }} | CryptoTracker</title>
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='stylesheets/base.css') }}">
     {% block style %}
     {% endblock %}
 </head>

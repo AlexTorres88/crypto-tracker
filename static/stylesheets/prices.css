@@ -1,5 +1,5 @@
 .table-coins {
-    width: 60%;
+    width: 100%;
     border-radius: 5px;
     border: 1px solid rgb(199, 199, 199);
     background-color: white;
@@ -11,7 +11,33 @@
     border: 1px solid rgb(199, 199, 199);
 }
 
-.table-content-center {
+.table-row {
     text-align: center;
 }
+
+.table-row td {
+    height: 50px;
+}
+
+.name-column {
+    display: flex;
+    justify-content: space-around;
+}
+
+.crypto-logo {
+    width: 30px;
+    height: 30px;
+    margin: auto 5px;
+}
+
+.crypto-name {
+    margin: auto 5px;
+}
+
+.crypto-short-name {
+    color: rgba(151, 150, 150, 0.8);
+    margin: auto 5px;
+}
+
+
 

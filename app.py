@@ -3,6 +3,7 @@ from flaskr.methods import add_cryptos, get_prices
 from flaskr.settings import *
 from flaskr.db_setup import database as db
 import datetime
+from constants import *
 
 # App definition
 app = Flask(__name__, instance_relative_config=True, template_folder='templates')
@@ -34,8 +35,8 @@ def prices():
     res = get_prices()
     # Change string to integer
     add_cryptos(res)
-    return render_template('prices.html', coins=res, title="Prices")
+    return render_template('prices.html', coins=res, coin_names=crypto_names, title="Prices")
 
 @app.errorhandler(404)
 def page_not_found(e):
-    return render_template('404.html'), 404
+    return render_template('404.html', title="404"), 404

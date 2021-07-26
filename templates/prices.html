@@ -16,14 +16,15 @@
         <th>Market Cap</th>
     </tr>
     {%for i in range(coins|length) %}
-        <tr>
-            <td class="table-content-center">{{ i + 1 }}.</td>
-            <td style="display: flex; justify-content: space-around;" class="table-content-center">
-                <img src="../static/images/{{coins[i].name}}-logo.svg" width="40" height="40" alt="BTC logo"/> 
-                <p>{{ coins[i].name }}</p>
+        <tr class="table-row">
+            <td>{{ i + 1 }}</td>
+            <td class="name-column">
+                <img src="../static/images/{{coins[i].name}}-logo.svg" class="crypto-logo" alt="{coins[i].name} logo"/> 
+                <p class="crypto-name"> {{ coin_names[coins[i].name] }} </p>
+                <p class="crypto-short-name">{{ coins[i].name }}</p>
             </td>
-            <td class="table-content-center">{{ coins[i].price }}</td>
-            <td class="table-content-center">{{ coins[i].market_cap }}</td>
+            <td>{{ coins[i].price }}</td>
+            <td>{{ coins[i].market_cap }}</td>
         </tr>
     {%endfor%}
 </table>

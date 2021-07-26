@@ -8,24 +8,26 @@
 <h1 class="text-center mb-1 mt-3">Cryptocurrency market prices</h1>
 <h3 class="text-center my-2 f-400">{{ coins[0].timestamp|format_date }}</h3>
 <h5 class="text-center my-1 f-300">All numbers are in USD</h5>
-<table class="table-coins">
-    <tr>
-        <th>#</th>
-        <th>Name</th>
-        <th>Price</th>
-        <th>Market Cap</th>
-    </tr>
-    {%for i in range(coins|length) %}
-        <tr class="table-row">
-            <td>{{ i + 1 }}</td>
-            <td class="name-column">
-                <img src="../static/images/{{coins[i].name}}-logo.svg" class="crypto-logo" alt="{coins[i].name} logo"/> 
-                <p class="crypto-name"> {{ coin_names[coins[i].name] }} </p>
-                <p class="crypto-short-name">{{ coins[i].name }}</p>
-            </td>
-            <td>{{ coins[i].price }}</td>
-            <td>{{ coins[i].market_cap }}</td>
+<div class="table-container">
+    <table class="table-coins">
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Market Cap</th>
         </tr>
-    {%endfor%}
-</table>
+        {%for i in range(coins|length) %}
+            <tr class="table-row">
+                <td>{{ i + 1 }}</td>
+                <td class="name-column">
+                    <img src="../static/images/{{coins[i].name}}-logo.svg" class="crypto-logo" alt="{coins[i].name} logo"/> 
+                    <p class="crypto-name"> {{ coin_names[coins[i].name] }} </p>
+                    <p class="crypto-short-name">{{ coins[i].name }}</p>
+                </td>
+                <td>{{ coins[i].price }}</td>
+                <td>{{ coins[i].market_cap }}</td>
+            </tr>
+        {%endfor%}
+    </table>
+</div>
 {% endblock %}

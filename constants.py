@@ -7,3 +7,13 @@ crypto_names = {
     "ADA": "Cardano",
     "BNB": "Binance Coin"
 }
+
+crypto_symbols = [
+    "BTC",
+    "XRP",
+    "ETH",
+    "USDT",
+    "DOGE",
+    "ADA",
+    "ADA"
+]

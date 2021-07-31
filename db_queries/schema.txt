@@ -1,4 +1,11 @@
-CREATE TABLE cryptos (
+CREATE TABLE users (
+   	id serial primary key,
+	email varchar(100) unique NOT NULL,
+	password varchar(100) NOT NULL,
+   	name varchar(1000) NOT NULL
+);
+
+REATE TABLE cryptos (
    id serial primary key,
    name varchar(80) unique NOT NULL
 	

@@ -7,8 +7,21 @@
     <nav class="navbar">
         <a href="/" class="nav-logo">CryptoTracker</a>
         <ul class="nav-menu">
+            {% if current_user.is_authenticated %}
+                <li class="nav-item">
+                    <a href="{{ url_for('auth.logout') }}" class="nav-link">Logout</a>
+                </li>
+            {% endif %}
+            {% if not current_user.is_authenticated %}
+                <li class="nav-item">
+                    <a href="{{ url_for('auth.login') }}" class="nav-link">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ url_for('auth.signup') }}" class="nav-link">Signup</a>
+                </li>
+            {% endif %}
             <li class="nav-item">
-                <a href="/prices" class="nav-link">Prices</a>
+                <a href="{{ url_for('main.prices') }}" class="nav-link">Prices</a>
             </li>
             <li class="nav-item">
                 <a href="/about" class="nav-link">About</a>

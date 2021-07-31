@@ -17,6 +17,7 @@ session = Session()
 
 metadata = db.MetaData()
 # Define the tables
+table_users = db.Table('users', metadata, autoload=True, autoload_with=engine)
 table_cryptos = db.Table('cryptos', metadata, autoload=True, autoload_with=engine)
 table_prices = db.Table('prices', metadata, autoload=True, autoload_with=engine)
 

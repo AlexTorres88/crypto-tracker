@@ -15,5 +15,5 @@ crypto_symbols = [
     "USDT",
     "DOGE",
     "ADA",
-    "ADA"
+    "BNB"
 ]

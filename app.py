@@ -2,12 +2,12 @@ from flask import Flask, render_template
 from flask_login import LoginManager
 from flaskr.settings import *
 from flaskr.db_setup import database as db
-import datetime
 
 # App definition
 app = Flask(__name__, instance_relative_config=True, template_folder='templates')
 
 # App configuration
+app.config['FLASK_APP'] = 'app'
 app.config['SECRET_KEY'] = 'super-secret'
 app.config['SQLALCHEMY_DATABASE_URI'] = SQLALCHEMY_DATABASE_URI
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = SQLALCHEMY_TRACK_MODIFICATIONS

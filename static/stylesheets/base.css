@@ -16,6 +16,46 @@ a {
     text-decoration: none;
 }
 
+.main {
+    height: 100vh;
+}
+
+.text-m-color {
+    color: #24b9c1;
+}
+
+.text-s-color {
+    color: #24c1a2;
+}
+
+.text-black {
+    color: black;
+}
+
+.text-white {
+    color: white;
+}
+
+.text-gray {
+    color: #475569;
+}
+
+.black {
+    background-color: black;
+}
+
+.white {
+    background-color: white;
+}
+
+.main-color {
+    background-color: #24b9c1;
+}
+
+.secondary-color {
+    background-color: #24c1a2;
+}
+
 .text-center {
     text-align: center;
 }

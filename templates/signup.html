@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
+{% block style %}
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='stylesheets/auth.css') }}">
+{% endblock %}
+
 {% with messages = get_flashed_messages() %}
 {% if messages %}
     <div class="notification is-danger">
@@ -11,30 +15,23 @@
 <form method="POST" action="/signup">
 
 {% block main %}
-<div>
-    <h3>Sign Up</h3>
-    <div>
-        <form method="POST" action="/signup">
-            <div">
-                <div">
-                    <input class="input is-large" type="email" name="email" placeholder="Email" autofocus="">
-                </div>
-            </div>
+<div class="container">
+    <h2 class="text-center">Sign Up</h2>
+    <form class="form-container" method="POST" action="/signup">
+        <div>
+            <input type="email" name="email" placeholder="Email" autofocus="">
+        </div>
 
-            <div>
-                <div>
-                    <input class="input is-large" type="text" name="name" placeholder="Name" autofocus="">
-                </div>
-            </div>
+        <div>
+            <input type="text" name="name" placeholder="Name">
+        </div>
 
-            <div>
-                <div>
-                    <input class="input is-large" type="password" name="password" placeholder="Password">
-                </div>
-            </div>
-
-            <button>Sign Up</button>
-        </form>
-    </div>
+        <div>
+            <input type="password" name="password" placeholder="Password">
+        </div>
+        <div>
+            <button class="form-button">Sign Up</button>
+        </div>
+    </form>
 </div>
 {% endblock %}

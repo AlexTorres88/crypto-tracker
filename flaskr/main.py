@@ -11,7 +11,7 @@ def index():
 
 @main.route('/prices')
 def prices():
-    ping_crypto_bot()
+    # ping_crypto_bot()
     res = get_prices()
     return render_template('prices.html', coins=res, coin_names=crypto_names, title="Prices")
 

@@ -30,7 +30,7 @@ All that is left is to setup the environment variables located in the settings.p
 flask run
 `````
 
-Datadog Monitoring
+# Datadog Monitoring
 
 It is really easy to configure datadog monitoring for this flask application.
 
@@ -45,5 +45,5 @@ pip install ddtrace
 And then running:
 `````
 FLASK_APP=[name_of_your_app_without_brackets] DATADOG_ENV=flask_test ddtrace-run flask run --port=[port_you_want]
-´´´´
+`````
 *Default port is 4999

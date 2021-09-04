@@ -30,7 +30,7 @@ All that is left is to setup the environment variables located in the settings.p
 flask run
 `````
 
-# Datadog Monitoring
+## Datadog Monitoring
 
 It is really easy to configure datadog monitoring for this flask application.
 

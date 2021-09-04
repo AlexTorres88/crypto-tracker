@@ -10,7 +10,7 @@ virtualenv [env_name_here_without_brackets]
 `````
 Then, you should activate the virtual environment:
 ````
-source/bin/activate
+source [env_name_here]/bin/activate
 ````
 After that, run:
 ````

@@ -25,6 +25,12 @@ and
 export FLASK_ENV=development
 `````
 
+You should also create a settings.py folder inside the flaskr directory with the necesarry env variables
+
+`````
+touch flaskr/settings.py
+`````
+
 All that is left is to setup the environment variables located in the settings.py file (Remember to rename your settings.example.py file to this) and then run:
 ````
 flask run

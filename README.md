@@ -1,6 +1,6 @@
 # Purpose
 
-The purpose of this project is to store the data collected by the azure-crypto-scraper I made and use it for something down in the road. 
+The purpose of this project is to store the data collected by the azure-crypto-scraper I made and use it for something down in the road. It currently only has login and signup functionality. 
 
 # Setup 
 

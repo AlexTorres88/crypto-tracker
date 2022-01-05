@@ -30,7 +30,7 @@ You should also create a settings.py folder inside the flaskr directory with the
 `````
 touch flaskr/settings.py
 `````
-*For the CRYPTO_BOT_URL you should create a bot that follows the response of the azure_crypto_scraper available on my github. 
+*For the CRYPTO_BOT_URL you should create a bot that follows the response of the azure-crypto-scraper available on my github. 
 
 All that is left is to setup the environment variables located in the settings.py file (Remember to rename your settings.example.py file to this) and then run:
 ````
